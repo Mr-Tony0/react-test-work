@@ -8,7 +8,7 @@ function Main(props) {
     const addListName = () => {
         let nameList = inputName.current.value;
         let ContentList = inputContent.current.value;
-        if(nameList == '' && ContentList == ''){
+        if(nameList == '' || ContentList == ''){
             alert('Заполните поля для добавления заметки.');
         }else{
             props.addName(nameList,ContentList);
