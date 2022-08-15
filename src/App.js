@@ -4,7 +4,8 @@ import Main from './components/main';
 
 
 
-function App() {
+
+function App(props) {
   return (
     <div className='app'>
       <header className='header'>
@@ -16,8 +17,8 @@ function App() {
         <div className="container">
         <h1>Список ToDo</h1>
           <div className="row">
-            <List/>
-            <Main/>
+            <List data = {props.data} addName = {props.addName}/>
+            <Main data = {props.data} addName = {props.addName}/>
           </div>
         </div>
       </main>
