@@ -1,9 +1,12 @@
 import React from "react";
+import {NavLink} from "react-router-dom"
 
-function ListTemplate(list) { 
-    const listOption = () => {
-        console.log(list.content);
-    }   
-    return <li onClick={listOption}>{list.name}</li>;
+function ListTemplate(props) { 
+   // return <li>{props.name}</li>;
+    return(
+    <li>
+        <NavLink to={'/edit/'+ props.id}>{props.name}</NavLink>
+    </li>
+    );
 }
 export default ListTemplate;
