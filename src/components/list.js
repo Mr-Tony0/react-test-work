@@ -1,9 +1,9 @@
 import ListTemplate from "./particles/list-tempalte";
-//import allList from "./../data/data";
 import React from "react";
 
 
 function List(props) {
+    {/* Вывод названий всех заметок */}
     const name = props.data.map((element) => {
         return <ListTemplate name = {element.name} content = {element.content} id = {element.id} />
     })

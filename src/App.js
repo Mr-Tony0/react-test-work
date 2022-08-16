@@ -21,16 +21,14 @@ function App(props) {
         <div className="container">
         <h1>Список ToDo</h1>
           <div className="row">
-            
-            {/* <MainAdd data = {props.data} addName = {props.addName} edit = {props.editClick}/> */}
-            
-            <List data = {props.data} addName = {props.addName} edit = {props.editClick}/>
+              {/* Боковая панель с названиями заметок */}
+              <List data = {props.data} addName = {props.addName} edit = {props.editClick}/>
               <Routes>
+                {/* Основной контент для добавления новой заметки */}
                 <Route path='/' element = {<MainAdd data = {props.data} addName = {props.addName}/>}/>
+                {/* Основной контент для редактирования и удаления заметки */}
                 <Route path='/edit/:id' element = {<MainEdit  data = {props.data} addName = {props.addName} edit = {props.edit} del ={props.del}/>}/>
               </Routes>
-            
-            
           </div>
         </div>
       </main>

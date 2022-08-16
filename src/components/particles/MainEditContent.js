@@ -4,11 +4,13 @@ import {NavLink} from "react-router-dom"
 function MainEditContent(props) { 
     const inputName = React.createRef();
     const inputContent = React.createRef();
+    {/* Изменение текущей заметки */}
     const editCurrent = () => {
         let nameList = inputName.current.value;
         let ContentList = inputContent.current.value;
         props.edit(props.id, nameList, ContentList);
     }
+    {/* Удаление текущей заметки */}
     const delCurrent = () => {
         props.del(props.id);
 

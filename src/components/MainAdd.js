@@ -4,10 +4,11 @@ import React from "react";
 function MainAdd(props) {
     const inputName = React.createRef();
     const inputContent = React.createRef();
+    {/* Добавление новой заметки */}
     const addListName = () => {
         let nameList = inputName.current.value;
         let ContentList = inputContent.current.value;
-        if(nameList == '' || ContentList == ''){
+        if(nameList == ''){
             alert('Заполните поля для добавления заметки.');
         }else{
             props.addName(nameList,ContentList);

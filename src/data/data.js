@@ -4,6 +4,7 @@ const data = {
         
     ]
 }
+// Добавление новой заметки
 export const addName = (name, content) => {
     let newList = {
         id: data.allList.length + 1,
@@ -13,6 +14,7 @@ export const addName = (name, content) => {
     data.allList.push(newList);
     renderAll(data);
 }
+// Редактирование заметки
 export const edit = (id, name, content) => {
     data.allList.map((element) => {
         if(element.id == id){
@@ -22,6 +24,7 @@ export const edit = (id, name, content) => {
     })
     renderAll(data);
 }
+// Удаление заметки
 export const del = (id) => {
     const index = data.allList.findIndex(n => n.id == id);
     console.log(index);
