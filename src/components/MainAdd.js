@@ -15,8 +15,8 @@ function MainAdd(props) {
     }
     return(
         <div className="main">
-            <h2>Создание задачи</h2>
             <div className="main__content">
+                <h2>Создание задачи</h2>
                 <input type="text" ref={inputName} className="list__input"/>
                 <textarea name="" ref={inputContent} className="list__input main__textarea"></textarea>
                 <div className="main__buttonBlock">

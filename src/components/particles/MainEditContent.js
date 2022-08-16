@@ -15,10 +15,13 @@ function MainEditContent(props) {
     }
     return(
         <div className="main__content"> 
+            <h2>Редактирование задачи</h2>
             <input type="text" ref={inputName} className="list__input" defaultValue={props.name}/>
             <textarea name="" ref={inputContent} className="list__input main__textarea" defaultValue={props.content}></textarea>
             <div className="main__buttonBlock">
-                <NavLink to = '/' className="list__button">Назад</NavLink>
+                <NavLink to = '/'>
+                    <button className="list__button">Назад</button>
+                </NavLink>
                 <NavLink to='/'>
                     <button className="list__button" onClick={delCurrent}>Удалить</button>
                 </NavLink>

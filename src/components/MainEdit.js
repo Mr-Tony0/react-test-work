@@ -12,7 +12,6 @@ function MainAdd(props) {
     })
     return(
         <div className="main">
-            <h2>Редактирование задачи</h2>
             {edits}
         </div>
     );
